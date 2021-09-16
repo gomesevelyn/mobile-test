@@ -10,7 +10,7 @@ pipeline {
 		stage ('Test Mobile'){
 			 steps {
 			 	git 'https://github.com/gomesevelyn/mobile-test'
-			 	bat 'java --version'
+			 	bat 'java -version'
 			 	bat 'mvn test'
 			 }
 		}	
