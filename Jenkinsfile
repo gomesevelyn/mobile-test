@@ -78,10 +78,11 @@ pipeline {
                         archiveArtifacts "**/screenshot/*.png"
                         echo "Publishing Junit Results"
                         junit "**/target/surefire-reports/junitreports/*.xml"
-                    }
-                }   
-            }
-        }
+                    	}
+                	}   
+            	}
+        	}
+       	} 
 		
 		stage ('Test Mobile'){
 			 steps {
