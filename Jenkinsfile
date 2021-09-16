@@ -1,10 +1,11 @@
 pipeline {
     agent any 
     stages {
-		stage ('Archive Apk')
-		 node('slave') {
-		  step([$class: 'ArtifactArchiver', artifacts: 'src/main/resources/CTAppium_1_2.apk'])
-		 }
+		stage ('Archive Apk'){
+			 steps {
+	            archiveArtifacts artifacts: 'src/main/resources/CTAppium_1_2.apk', fingerprint: true 
+	        }
+		} 
 		 
 		stage ('Firebase test') {
 		    steps {
