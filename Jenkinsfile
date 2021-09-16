@@ -35,7 +35,7 @@ pipeline {
 	            echo "Clean Workspace"
 	            cleanWs()
 	   		}
-		 
+        } 
 		stage ('Firebase test') {
 		    steps {
 		        firebase instrumentation(app: 'CTAppium_1_2.apk')
