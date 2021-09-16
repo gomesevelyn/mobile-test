@@ -10,9 +10,11 @@ pipeline {
 		stage ('Test Mobile'){
 			 steps {
 			 	git 'https://github.com/gomesevelyn/mobile-test'
+			 	bat 'java --version'
 			 	bat 'mvn test'
 			 }
-		}	 
+		}	
+		 
 		stage ('Firebase test') {
 		    steps {
 		        firebase instrumentation(app: 'CTAppium_1_2.apk')
