@@ -67,7 +67,8 @@ pipeline {
                 	}   
             	}
         	}
-       	} 		
+       	} 
+       	}		
 		 
 		stage ('Firebase test') {
 		    steps {
