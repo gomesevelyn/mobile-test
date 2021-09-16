@@ -4,8 +4,6 @@ pipeline {
         stage("Initial Configuration") {
 	        steps {
 	            script {
-	            	 // -- Set the suite name and route parameter
-	                SUITE_PATH = "src/test/resources/suites/"+"${JOB_APPIUM_SUITE}"+".xml" 
 	                
 	            	if (JOB_PLATFORM_NAME == "android"){
 	                    // -- Set the Platform Tool Directory. 
