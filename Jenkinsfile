@@ -2,7 +2,7 @@ pipeline {
     agent any 
     stages {
 		stage ('Archive Apk')
-		 node('slave') {
+		 steps {
 		  step([$class: 'ArtifactArchiver', artifacts: 'src/main/resources/CTAppium_1_2.apk'])
 		 }
 		 
