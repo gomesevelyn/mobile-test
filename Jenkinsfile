@@ -3,7 +3,6 @@ pipeline {
     stages {
 		stage ('Archive Apk'){
 			 steps {
-	            sh 'make' 
 	            archiveArtifacts artifacts: 'src/main/resources/CTAppium_1_2.apk', fingerprint: true 
 	        }
 		} 
