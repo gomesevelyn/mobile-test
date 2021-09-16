@@ -14,7 +14,7 @@ pipeline {
 	        }
 		} 
 		
-		stage ('"Initial Configuration") {
+		stage ('Initial Configuration') {
 			steps{
 				script {
                 // -- Set the Directory of the files in the workspace
