@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="parallel">
+	<test name="Device-1">
+		<parameter name="deviceName" value="emulator-5554" />
+		<parameter name="udid" value="emulator-5554" />
+		<parameter name="platformVersion" value="9.0" />
+		<parameter name="url" value="http://localhost:4723/wd/hub" />
+		<classes>
+			<class name="ComponentesMobileTest.ComponentesMobileTest"/>
+		</classes>
+	</test> 
+</suite> 
