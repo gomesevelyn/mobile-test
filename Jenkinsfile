@@ -28,14 +28,13 @@ pipeline {
 	                    PLATFORM_TOOL_DIRECTORY = "${env.ANDROID_HOME}"+"/platform-tools/"
 	                    // -- Set the Emulator Directory.
 	                    EMULATOR_DIRECTORY = "${env.ANDROID_HOME}"+"/emulator/"
-	                }
-            	}
+                	}
+        		}	
 
 	            // -- Clean Workspace
 	            echo "Clean Workspace"
 	            cleanWs()
-		   	}
-		 }	
+	   		}
 		 
 		stage ('Firebase test') {
 		    steps {
