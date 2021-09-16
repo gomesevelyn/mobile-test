@@ -5,6 +5,30 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>ComponentesMobile</name>
   
+  <properties>
+		<appiumHub>http://localhost:8080/wd/hub</appiumHub>
+  </properties>
+  
+  <build>
+  	<plugins>
+		<plugin>
+			<artifactId>properties-maven-plugin</artifactId>
+			<version>1.0.0</version>
+			<executions>
+				<execution>
+					<phase>generate-resources</phase>
+					<goals>
+						<goal>write-project-properties</goal>
+					</goals>
+					<configuration>
+						<outputFile>${project.build.testOutputDirectory}/config.properties</outputFile>
+					</configuration>
+				</execution>
+			</executions>
+	    </plugin>
+	</plugins>	    
+  </build>	
+  
   <dependencies>
 		<dependency>
 			<groupId>io.appium</groupId>

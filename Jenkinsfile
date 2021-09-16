@@ -13,7 +13,7 @@ pipeline {
 			 	bat 'java -version'
 			 	bat 'mvn test'
 			 }
-		}	
+		}			
 		 
 		stage ('Firebase test') {
 		    steps {
