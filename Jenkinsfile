@@ -3,8 +3,9 @@ pipeline {
     stages {
 		stage ('Archive Apk')
 		 steps {
-		  step([$class: 'ArtifactArchiver', artifacts: 'src/main/resources/CTAppium_1_2.apk'])
-		 }
+            sh 'make' 
+            archiveArtifacts artifacts: 'src/main/resources/CTAppium_1_2.apk', fingerprint: true 
+        }
 		 
 		stage ('Firebase test') {
 		    steps {
