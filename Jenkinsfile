@@ -1,5 +1,16 @@
+// -- Directory where the Project Files are located.  
+def JOB_FILES_DIRECTORY
+// -- Directory where the Platform Tools is located
+def PLATFORM_TOOL_DIRECTORY
+// -- Directory where the Android Emulator is located
+def EMULATOR_DIRECTORY
+// -- Path of the Suite to execute
+def SUITE_PATH
+
+
 pipeline {
     agent any 
+    options{timestamps()}
     stages {
         stage("Initial Configuration") {
 	        steps {
@@ -11,8 +22,8 @@ pipeline {
 	                    // -- Set the Emulator Directory.
 	                    EMULATOR_DIRECTORY = "${env.ANDROID_HOME}"+"/emulator/"
 	                }
-	            }
-	        }
+	         	}
+	      	}
   	  	}
   	  	
   	  	
