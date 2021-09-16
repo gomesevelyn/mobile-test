@@ -19,8 +19,6 @@ pipeline {
 				script {
                 // -- Set the Directory of the files in the workspace
 	                JOB_FILES_DIRECTORY = "${env.JOB_DIRECTORY}"+"src/main/resources"
-	                // -- Set the suite name and route parameter
-	                SUITE_PATH = "src/test/resources/suites/"+"${JOB_APPIUM_SUITE}"+".xml" 
 	
 	                // -- Initial Configuration Only If the Platform is Android.
 	                if (JOB_PLATFORM_NAME == "android"){
