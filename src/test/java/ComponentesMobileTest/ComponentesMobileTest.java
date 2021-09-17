@@ -25,14 +25,15 @@ public class ComponentesMobileTest {
 	private AndroidDriver<MobileElement> driver;
 
 	  @Before
-	  @Parameters({"deviceName","udid", "platformVersion","url"})
+	//  @Parameters({"deviceName","udid", "platformVersion","url"})
+	//  public void inicializarAppium(String deviceName, String udid,String platformVersion,String url) throws MalformedURLException
 
-	  public void inicializarAppium(String deviceName, String udid,String platformVersion,String url) throws MalformedURLException {
+	  public void inicializarAppium() throws MalformedURLException {
 	    DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
-		desiredCapabilities.setCapability("deviceName", deviceName);
-		desiredCapabilities.setCapability("udid", udid);
+		desiredCapabilities.setCapability("deviceName", "emulator-5554");
+		desiredCapabilities.setCapability("udid", "emulator-5554");
 	    desiredCapabilities.setCapability("platformName", "Android");
-	    desiredCapabilities.setCapability("platformVersion", platformVersion);
+	    desiredCapabilities.setCapability("platformVersion", "9.0");
 	    desiredCapabilities.setCapability("automationName", "UiAutomator2");
 	    
 	    //instruções para que o appium faça a instalação do APK
@@ -40,7 +41,7 @@ public class ComponentesMobileTest {
 	   //desiredCapabilities.setCapability(MobileCapabilityType.APP, "/Users/Evely/eclipse-workspace/br.com.evelyn.Components/src/main/resources/CTAppium_1_2.apk");
 	    
 
-	    URL remoteUrl = new URL(url);
+	    URL remoteUrl = new URL("http://localhost:4723/wd/hub");
 
 	    driver = new AndroidDriver<MobileElement>(remoteUrl, desiredCapabilities);
 	  }
