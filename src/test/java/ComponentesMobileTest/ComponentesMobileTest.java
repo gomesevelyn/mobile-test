@@ -37,8 +37,7 @@ public class ComponentesMobileTest {
 	    desiredCapabilities.setCapability("automationName", "UiAutomator2");
 	    
 	    //instruções para que o appium faça a instalação do APK
-	   // desiredCapabilities.setCapability("app", "C:\\Users\\Evely\\eclipse-workspace\\br.com.evelyn.Components\\src\\test\\resources\\CTAppium_1_2.apk");
-	   //desiredCapabilities.setCapability(MobileCapabilityType.APP, "/Users/Evely/eclipse-workspace/br.com.evelyn.Components/src/main/resources/CTAppium_1_2.apk");
+	   desiredCapabilities.setCapability(MobileCapabilityType.APP, "/Users/Evely/eclipse-workspace/br.com.evelyn.Components/src/main/resources/CTAppium_1_2.apk");
 	    
 
 	    URL remoteUrl = new URL("http://localhost:4723/wd/hub");
