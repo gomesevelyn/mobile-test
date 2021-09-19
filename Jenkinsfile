@@ -1,10 +1,6 @@
 pipeline {
     agent any 
 
-	environment {
-        APPIUM_PORT= 5555
-    }
-
     stages {
 		stage ('Archive Apk'){
 			 steps {
@@ -12,9 +8,9 @@ pipeline {
 	        }
 		} 
 		
-		stage ('Init Appium') {
+		stage ('Init BrowserStack') {
 			steps{
-				sh "appium --port ${APPIUM_PORT}"
+				bat 'mvn test -P <android-first-test>'
 			}
 		}
 		stage('Mobile Test') {
