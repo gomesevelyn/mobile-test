@@ -10,7 +10,7 @@ pipeline {
 		
 		stage ('Init BrowserStack') {
 			steps{
-				bat 'mvn test -P <android-first-test>'
+				bat 'mvn test'
 			}
 		}
 		stage('Mobile Test') {
