@@ -1,12 +1,10 @@
-// -- Directory where the Project Files are located.  
-def JOB_FILES_DIRECTORY
-// -- Directory where the Platform Tools is located
-def PLATFORM_TOOL_DIRECTORY
-// -- Directory where the Android Emulator is located
-def EMULATOR_DIRECTOR
-
 pipeline {
     agent any 
+
+	environment {
+        APPIUM_PORT= 5555
+    }
+
     stages {
 		stage ('Archive Apk'){
 			 steps {
@@ -16,8 +14,7 @@ pipeline {
 		
 		stage ('Init Appium') {
 			steps{
-				bat 'appium & --device_name Nexus_S' 
-				bat 'mvn test'
+				sh "appium --port ${APPIUM_PORT}"
 			}
 		}
 		stage('Mobile Test') {
