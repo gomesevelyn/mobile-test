@@ -8,17 +8,10 @@ pipeline {
 	        }
 		} 
 		
-		stage ('Init BrowserStack') {
+		stage ('Init BrowserStack Mobile Test') {
 			steps{
 				bat 'mvn test'
 			}
 		}
-		stage('Mobile Test') {
-			steps{
-				git 'https://github.com/gomesevelyn/mobile-test'
-				bat 'mvn test'
-			}
-		}
-		
 	}
 }		
