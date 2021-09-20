@@ -10,6 +10,7 @@ pipeline {
 		
 		stage ('Init BrowserStack Mobile Test') {
 			steps{
+				bat 'adb install CTAppium_1_2.apk'
 				bat 'mvn test'
 			}
 		}
