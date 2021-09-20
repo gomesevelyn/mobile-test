@@ -31,7 +31,8 @@ public class ComponentesMobileTest {
 	public void inicializarAppium() throws MalformedURLException {
 
 		DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
-		/*
+		
+		//Configuracoes para rodar device no BrowserStack
 		// Set your access credentials
 		desiredCapabilities.setCapability("browserstack.user", "evelyngomes_OscVB5");
 		desiredCapabilities.setCapability("browserstack.key", "qJAcyDz5GqdTqWqELAaq");
@@ -44,16 +45,17 @@ public class ComponentesMobileTest {
 		desiredCapabilities.setCapability("project", "Test Jenkins with BrowserStack");
 		desiredCapabilities.setCapability("build", "Java Android");
 		desiredCapabilities.setCapability("name", "first_test");
-		*/
-
 		
+		
+		//Configuracoes para rodar device fisico e localmente
+		/*
 		  desiredCapabilities.setCapability("deviceName", "Emulator");
 		  desiredCapabilities.setCapability("udid", "K3AXB6036169X7L");
 		  desiredCapabilities.setCapability("platformName", "Android");
 		  //desiredCapabilities.setCapability("platformVersion", "9.0");
-		  desiredCapabilities.setCapability("automationName", "UiAutomator2");
+		  desiredCapabilities.setCapability("automationName", "UiAutomator2"); */
 		  
-		  driver = new AndroidDriver<MobileElement> (new URL("http://localhost:4723/wd/hub"),desiredCapabilities); 
+		  driver = new AndroidDriver<MobileElement> (new URL("http://hub.browserstack.com/wd/hub"),desiredCapabilities); 
 		  
 
 		// instrucao para que o appium faca a instalacao do APK
@@ -62,8 +64,10 @@ public class ComponentesMobileTest {
 
 		// Initialise the remote Webdriver using BrowserStack remote URL
 		//URL remoteUrl = new URL("http://hub.browserstack.com/wd/hub");
-		URL remoteUrl = new URL("http://localhost:4723/wd/hub");
-		driver = new AndroidDriver<MobileElement>(remoteUrl, desiredCapabilities);
+		
+		//executa localmente
+		//URL remoteUrl = new URL("http://localhost:4723/wd/hub");
+		//driver = new AndroidDriver<MobileElement>(remoteUrl, desiredCapabilities);
 		
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		
