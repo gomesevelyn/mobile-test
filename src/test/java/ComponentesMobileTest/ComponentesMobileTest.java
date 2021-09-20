@@ -38,7 +38,7 @@ public class ComponentesMobileTest {
 		desiredCapabilities.setCapability("browserstack.key", "qJAcyDz5GqdTqWqELAaq");
 		
 		 // Set URL of the application under test
-		desiredCapabilities.setCapability("app", "bs://<app-id>");
+		desiredCapabilities.setCapability("app", "bs://src/main/resources/CTAppium_1_2.apk");
 
 		// Specify device and os_version for testing
 		desiredCapabilities.setCapability("device", "Google Pixel 3");
@@ -62,10 +62,10 @@ public class ComponentesMobileTest {
 		  
 		  driver = new AndroidDriver<MobileElement> (new URL("http://hub.browserstack.com/wd/hub"),desiredCapabilities); 
 		  
-
+		 /* 
 		// instrucao para que o appium faca a instalacao do APK
 		desiredCapabilities.setCapability(MobileCapabilityType.APP,
-				"/Users/Evely/eclipse-workspace/br.com.evelyn.Components/src/main/resources/CTAppium_1_2.apk");
+				"/Users/Evely/eclipse-workspace/br.com.evelyn.Components/src/main/resources/CTAppium_1_2.apk"); */
 		
 		
 
