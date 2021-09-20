@@ -36,6 +36,9 @@ public class ComponentesMobileTest {
 		// Set your access credentials
 		desiredCapabilities.setCapability("browserstack.user", "evelyngomes_OscVB5");
 		desiredCapabilities.setCapability("browserstack.key", "qJAcyDz5GqdTqWqELAaq");
+		
+		 // Set URL of the application under test
+		desiredCapabilities.setCapability("app", "bs://<app-id>");
 
 		// Specify device and os_version for testing
 		desiredCapabilities.setCapability("device", "Google Pixel 3");
@@ -45,6 +48,8 @@ public class ComponentesMobileTest {
 		desiredCapabilities.setCapability("project", "Test Jenkins with BrowserStack");
 		desiredCapabilities.setCapability("build", "Java Android");
 		desiredCapabilities.setCapability("name", "first_test");
+		
+		
 		
 		
 		//Configuracoes para rodar device fisico e localmente
@@ -57,14 +62,12 @@ public class ComponentesMobileTest {
 		  
 		  driver = new AndroidDriver<MobileElement> (new URL("http://hub.browserstack.com/wd/hub"),desiredCapabilities); 
 		  
-		 /* 
-		// instrucao para que o appium faca a instalacao do APK device fisico
+
+		// instrucao para que o appium faca a instalacao do APK
 		desiredCapabilities.setCapability(MobileCapabilityType.APP,
-				"/Users/Evely/eclipse-workspace/br.com.evelyn.Components/src/main/resources/CTAppium_1_2.apk");*/
+				"/Users/Evely/eclipse-workspace/br.com.evelyn.Components/src/main/resources/CTAppium_1_2.apk");
 		
-		// instrucao para que o appium faca a instalacao do APK BrowserStack
-		  desiredCapabilities.setCapability(MobileCapabilityType.APP,
-				"/src/main/resources/CTAppium_1_2.apk");
+		
 
 		// Initialise the remote Webdriver using BrowserStack remote URL
 		//URL remoteUrl = new URL("http://hub.browserstack.com/wd/hub");

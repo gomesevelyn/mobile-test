@@ -8,6 +8,7 @@ pipeline {
 	        }
 		} 
 		
+		
 		stage ('Init BrowserStack Mobile Test') {
 			steps{
 				bat 'mvn test'
