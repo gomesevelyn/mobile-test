@@ -57,10 +57,14 @@ public class ComponentesMobileTest {
 		  
 		  driver = new AndroidDriver<MobileElement> (new URL("http://hub.browserstack.com/wd/hub"),desiredCapabilities); 
 		  
-
-		// instrucao para que o appium faca a instalacao do APK
+		 /* 
+		// instrucao para que o appium faca a instalacao do APK device fisico
 		desiredCapabilities.setCapability(MobileCapabilityType.APP,
-				"/Users/Evely/eclipse-workspace/br.com.evelyn.Components/src/main/resources/CTAppium_1_2.apk");
+				"/Users/Evely/eclipse-workspace/br.com.evelyn.Components/src/main/resources/CTAppium_1_2.apk");*/
+		
+		// instrucao para que o appium faca a instalacao do APK BrowserStack
+		  desiredCapabilities.setCapability(MobileCapabilityType.APP,
+				"/src/main/resources/CTAppium_1_2.apk");
 
 		// Initialise the remote Webdriver using BrowserStack remote URL
 		//URL remoteUrl = new URL("http://hub.browserstack.com/wd/hub");
