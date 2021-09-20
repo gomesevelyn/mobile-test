@@ -5,10 +5,6 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>ComponentesMobile</name>
   
-  <properties>
-		<appiumHub>http://localhost:8080/wd/hub</appiumHub>
-  </properties>
-  
   <build>
   	<plugins>
   		<plugin>
