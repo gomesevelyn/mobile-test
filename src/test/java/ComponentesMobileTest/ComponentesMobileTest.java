@@ -38,7 +38,7 @@ public class ComponentesMobileTest {
 		desiredCapabilities.setCapability("browserstack.key", "qJAcyDz5GqdTqWqELAaq");
 		
 		 // Set URL of the application under test
-		desiredCapabilities.setCapability("app", "bs://src/main/resources/CTAppium_1_2.apk");
+		desiredCapabilities.setCapability("app", "bs://<app-id>");
 
 		// Specify device and os_version for testing
 		desiredCapabilities.setCapability("device", "Google Pixel 3");
