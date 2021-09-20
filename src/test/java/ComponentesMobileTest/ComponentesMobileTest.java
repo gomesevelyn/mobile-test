@@ -38,7 +38,7 @@ public class ComponentesMobileTest {
 		desiredCapabilities.setCapability("browserstack.key", "qJAcyDz5GqdTqWqELAaq");
 		
 		 // Set URL of the application under test
-		desiredCapabilities.setCapability("app", "bs://j3c874f21852ba57957a3fdc33f47514288c4ba4");
+		desiredCapabilities.setCapability("app", "bs://df489effd3e8cb1876ba8eb9e631189748148824");
 
 		// Specify device and os_version for testing
 		desiredCapabilities.setCapability("device", "Google Pixel 3");
